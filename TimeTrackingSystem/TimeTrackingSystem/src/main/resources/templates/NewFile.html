@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Project Details</h2>
+<form action="updateProject" method="post">
+<pre>
+ProjectId:<input type="text" name="projectId" th:value="${project.projectId}" readonly>
+ClientId:<input type="text" name="clientId" th:value="${project.clientId}">
+ProjectName:<input type="text" name="projectName" th:value="${project.projectName}">
+ProjectDescription:<input type="text" name="projectDes" th:value="${project.projectDes}">
+ProjectDeliveryDate:<input type="text" name="projectDeliveryDate" th:value="${project.projectDeliveryDate}">
+Start Date:<input type="text" name="s_date" th:value="${project.s_date}">
+End Date:<input type="text" name="e_date" th:value="${project.e_date}">
+<input type="submit" value="save"/>
+</pre>
+</form>
+
+</body>
+</html>

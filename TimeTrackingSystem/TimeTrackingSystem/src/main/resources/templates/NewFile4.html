@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="assignedPM" method="post" >
+
+
+ProjectId:<input type="text" name="projectId" th:value="${project.projectId}" readonly>
+
+Project Manager:
+<select name="pmId"> 
+<option  th:each="employee : ${employee}"
+         th:value="${employee.empId}"
+         th:text="${employee.empName}">
+
+</option>
+
+</select>
+
+
+<input type="submit" value="save"/>
+</form>
+
+</body>
+</html>

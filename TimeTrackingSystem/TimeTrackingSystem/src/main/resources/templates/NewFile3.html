@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Task Edit</h2>
+<form action="updateTask"  method="post">
+<pre>
+TaskId:<input type="text" name="taskId" th:value="${task.taskId}">
+ProjectId:<input type="text" name="projectId" th:value="${task.projectId}">
+TaskTitle:<input type="text" name="taskTitle" th:value="${task.taskTitle}">
+ProjectDescription:<input type="text" name="projectDespn" th:value="${task.projectDespn}">
+TaskDescription:<input type="text" name="taskDspn" th:value="${task.taskDspn}">
+TaskStartDate:<input type="date" name="taskStartDate" th:value="${task.taskStartDate}">
+TaskEndDate:<input type="date" name="taskEndDate" th:value="${task.taskEndDate}">
+
+EmployeeId:<input type="text" name="empId" th:value="${task.empId}">
+Status:<input type="text" name="status" th:value="${task.status}">
+ <input type="submit" value="save"/>
+</pre>
+</form>
+<a href="displayTask">View Task</a>
+
+</body>
+</html>

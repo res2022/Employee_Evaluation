@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Employee Edit</h2>
+<form action="updateEmployee" method="post">
+<pre>
+EmployeeId:<input type="text" name="empId" th:value="${employee.empId}" /><br/>
+EmployeeName:<input type="text" name="empName" th:value="${employee.empName}" /><br/>
+EmployeeAddress:<input type="text"  name="empAddress"  th:value="${employee.empAddress}" /><br/>
+EmployeePhoneNo:<input type="text" name="empPhoneNo"  th:value="${employee.empPhoneNo}" /><br/>
+EmployeeDob:<input type="date"  name="empDob"  th:value="${employee.empDob}" /><br/>
+<!-- EmployeeDoj:<input type="date"  name="empDateOfJoin"   th:value="${employee.empDateOfJoin}" /><br/>
+ -->
+EmployeeDepartment:<input type="text"  name="empDepartment"   th:value="${employee.empDepartment}" /><br/>
+EmployeeDesignation: <select name="empDesignation" >
+
+<option th:value="ProjectManager" th:field="*{employee.empDesignation}">Project Manager</option>
+<option th:value="Lead" th:field="*{employee.empDesignation}">Lead</option>
+<option th:value="SrDeveloper" th:field="*{employee.empDesignation}">Sr Developer</option>
+<option th:value="HR" th:field="*{employee.empDesignation}">HR</option>
+<option th:value="JrDeveloper" th:field="*{employee.empDesignation}">jr Developer</option>
+
+</select><br/>
+<input type="submit" value="save"/>
+</pre>
+
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Client Edit</h2>
+<form action="updateClient" method="post">
+<pre>
+ClientId:<input type="text" name="clientId" th:value="${client.clientId}">
+ClientName:<input type="text" name="clientName"  th:value="${client.clientName}">
+ClientOrganizationName:<input type="text" name="clientOrganizationName"  th:value="${client.clientOrganizationName}">
+ClientAddress:<input type="text" name="clientAddress"  th:value="${client.clientAddress}">
+ClientEmail:<input type="text" name="clientEmail"  th:value="${client.clientEmail}">
+ClientPhoneNo:<input type="text" name="clientPhoneNo"  th:value="${client.clientPhoneNo}">
+ClientWebsiteUrl:<input type="text" name="clientWebsiteUrl"  th:value="${client.clientWebsiteUrl}">
+
+<input type="submit" value="save"/>
+
+</pre>
+</form>
+
+
+
+</body>
+</html>
